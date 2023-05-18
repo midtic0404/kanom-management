@@ -1,17 +1,17 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
     <mat-nav-list>
-      <mat-list-item>
+      <mat-list-item [routerLink]="['/']">
         <button mat-icon-button>
           <mat-icon>dashboard</mat-icon>
         </button>
         <span>Dashboard</span>
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item [routerLink]="['/recipes']">
         <button mat-icon-button>
-          <mat-icon>assignment</mat-icon>
+          <mat-icon>restaurant_menu</mat-icon>
         </button>
-        <span>Reports</span>
+        <span>Recipes</span>
       </mat-list-item>
       <mat-list-item>
         <button mat-icon-button>
@@ -29,8 +29,7 @@
     </mat-toolbar>
 
     <!-- Main content goes here -->
-    <div style="margin: 16px;">
-      <h1>App Content</h1>
+    <div class="content-container">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
